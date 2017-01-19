@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partners_form_website" model="ir.ui.view">
+        <field name="name">view.res.partner.form.website</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="prename"/>
+                <field name="name_1"/>
+                <field name="name_2"/>
+                <field name="name_3"/>
+                <field name="name_4"/>
+            </xpath>
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="mailbox"/>
+            </xpath>
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="phone_2"/>
+            </xpath>
+            <xpath expr="//field[@name='fax']" position="attributes">
+                <attribute name="string">Fax 1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
